@@ -11,8 +11,13 @@ FILES = [
     "profile-bertos.png", "profile-nayati.png", "profile-sirman.png",
     "profile-kingcool.png", "profile-aristarco.png", "profile-halton.png",
     "profile-ansul.png", "profile-swastik-synergy.png",
-    "client-3.png", "international-25.jpg", "client-special-39.png",
-    "client-2.png", "client-11.png", "client-12.png",
+    "client-2.png", "client-3.png", "client-5.png", "client-7.png",
+    "client-9-1.png", "client-11.png", "client-12.png", "client-13.png",
+    "client-14.png", "client-16.png", "client-17.png", "client-18.png",
+    "client-19.png", "client-20.png", "client-21.png",
+    "client-special-37.png", "client-special-38.png", "client-special-39.png",
+    "client-special-40.png", "international-22.jpg", "international-24.jpg",
+    "international-25.jpg", "international-26.jpg",
 ]
 
 CANVAS = (720, 300)
