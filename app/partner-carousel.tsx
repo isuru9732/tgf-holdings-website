@@ -29,9 +29,9 @@ export function PartnerCarousel({brands,variant="partners"}:{brands:readonly Par
 
   const clients=variant==="clients";
   return <div className={`partner-carousel ${clients?"client-carousel":""}`} onMouseEnter={()=>setPaused(true)} onMouseLeave={()=>setPaused(false)} onFocus={()=>setPaused(true)} onBlur={()=>setPaused(false)}>
-    <div className={clients?"country-logo-row country-client-row client-logo-set":"partner-logo-row"} key={active} aria-live="polite">
-      {groups[active].map(([name,src,dark])=><div className={clients?"client-logo-card":dark?"partner-logo-card logo-on-dark":"partner-logo-card"} key={name}><img src={src} alt={name}/></div>)}
-    </div>
+    {clients?<div className="client-carousel-stage" aria-live="polite">{groups.map((group,index)=><div className={`country-logo-row country-client-row client-logo-set ${index===active?"active":""}`} aria-hidden={index!==active} key={index}>{group.map(([name,src])=><div className="client-logo-card" key={name}><img src={src} alt={name}/></div>)}</div>)}</div>:<div className="partner-logo-row" key={active} aria-live="polite">
+      {groups[active].map(([name,src,dark])=><div className={dark?"partner-logo-card logo-on-dark":"partner-logo-card"} key={name}><img src={src} alt={name}/></div>)}
+    </div>}
     <div className={`partner-carousel-controls ${clients?"client-carousel-controls":""}`} aria-label={`${clients?"Client":"Partner"} logo groups`}>
       {groups.map((_,index)=><button type="button" key={index} className={index===active?"active":""} aria-label={`Show ${clients?"client":"partner"} logo group ${index+1}`} aria-current={index===active?"true":undefined} onClick={()=>setActive(index)}/>) }
     </div>
