@@ -97,6 +97,9 @@
 .country-service-card .service-photo{aspect-ratio:16/10;height:auto}
 .country-project-grid img.project-shot{aspect-ratio:4/3;height:auto}
 .partner-logo-card img,.country-logo-row img{object-fit:contain;object-position:center}
+.partner-logo-card,.partner-logo-card.logo-on-dark,.country-logo-row>div{background:#f7f5f0}
+.partner-logo-card img,.country-logo-row img{image-rendering:auto;filter:contrast(1.08) saturate(1.04);backface-visibility:hidden}
+.partner-logo-card img[alt="Aristarco"]{filter:drop-shadow(1px 0 #17223a) drop-shadow(-1px 0 #17223a) drop-shadow(0 1px #17223a) drop-shadow(0 -1px #17223a) drop-shadow(0 2px 2px rgba(14,7,48,.22))}
 .country-signature{transform:none}
 .country-bangladesh .signature-flag img,.market-2 .market-flag img{object-position:43% 50%;transform:scale(1.1)}
 
@@ -131,3 +134,11 @@
 }
 
 @keyframes countryHeroMobileBreath{0%,100%{transform:scale(1)}50%{transform:scale(1.055)}}
+
+/* Client showcase uses the same disciplined grid with a quieter reveal. */
+.client-logo-set{animation:clientSetReveal .7s cubic-bezier(.22,.7,.3,1) both}
+.client-carousel-controls button{transform:rotate(45deg);border-radius:2px}
+.client-carousel-controls button.active{width:18px;border-radius:2px;background:var(--gold)}
+@keyframes clientSetReveal{from{opacity:0;transform:scale(.975);filter:blur(4px)}to{opacity:1;transform:scale(1);filter:blur(0)}}
+@media(prefers-reduced-motion:reduce){.client-logo-set{animation:none}}
+@media(max-width:680px){.client-logo-set>.client-logo-card:last-child:nth-child(odd){grid-column:1/-1;justify-self:center;width:calc(50% - 5px)}}
