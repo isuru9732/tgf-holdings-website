@@ -169,7 +169,7 @@
 
 /* Independent market imagery prevents atlas bleed and distortion at narrow widths. */
 .proto-market{background-size:cover;background-position:center;background-repeat:no-repeat}
-.proto-market.market-1{background-image:linear-gradient(0deg,rgba(2,16,31,.8),rgba(2,16,31,.01) 72%),url('/market-sri-lanka.webp')}
+.proto-market.market-1{background-image:linear-gradient(0deg,rgba(2,16,31,.8),rgba(2,16,31,.01) 72%),url('/market-sri-lanka.webp');background-position:center 25%}
 .proto-market.market-2{background-image:linear-gradient(0deg,rgba(2,16,31,.8),rgba(2,16,31,.01) 72%),url('/market-bangladesh.webp')}
 .proto-market.market-3{background-image:linear-gradient(0deg,rgba(2,16,31,.8),rgba(2,16,31,.01) 72%),url('/market-maldives.webp')}
 .proto-market.market-4{background-image:linear-gradient(0deg,rgba(2,16,31,.8),rgba(2,16,31,.01) 72%),url('/market-dubai.webp')}
