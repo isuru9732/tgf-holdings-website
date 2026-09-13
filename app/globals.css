@@ -10,8 +10,8 @@
 
 /* Distinct image atlas crops and authentic logo presentation */
 .proto-market{background-image:linear-gradient(0deg,rgba(2,16,31,.96),rgba(2,16,31,.02) 72%),url('/markets-atlas.png');background-size:100% 100%,400% 100%;background-position:center,0 center;background-repeat:no-repeat}.market-2{background-position:center,33.333% center}.market-3{background-position:center,66.666% center}.market-4{background-position:center,100% center}
-.service-photo{background-image:url('/services-atlas.png');background-size:600% 100%;background-position:0 center;background-repeat:no-repeat}.service-photo-2{background-image:url('/services-atlas.png');background-position:20% center}.service-photo-3{background-position:40% center}.service-photo-4{background-position:60% center}.service-photo-5{background-image:url('/services-atlas.png');background-position:80% center}.service-photo-6{background-position:100% center}
-.project-shot{background-image:url('/projects-atlas.png');background-size:500% 100%;background-position:0 center;background-repeat:no-repeat}.project-shot-2{background-image:url('/projects-atlas.png');background-position:25% center}.project-shot-3{background-position:50% center}.project-shot-4{background-image:url('/projects-atlas.png');background-position:75% center}.project-shot-5{background-position:100% center}
+.service-photo{background-image:url('/services-atlas.webp');background-size:600% 100%;background-position:0 center;background-repeat:no-repeat}.service-photo-2{background-image:url('/services-atlas.webp');background-position:20% center}.service-photo-3{background-position:40% center}.service-photo-4{background-position:60% center}.service-photo-5{background-image:url('/services-atlas.webp');background-position:80% center}.service-photo-6{background-position:100% center}
+.project-shot{background-image:url('/projects-atlas.webp');background-size:500% 100%;background-position:0 center;background-repeat:no-repeat}.project-shot-2{background-image:url('/projects-atlas.webp');background-position:25% center}.project-shot-3{background-position:50% center}.project-shot-4{background-image:url('/projects-atlas.webp');background-position:75% center}.project-shot-5{background-position:100% center}
 .proto-logo-row div{height:86px;background:linear-gradient(145deg,#071d34,#03101f);overflow:hidden}.proto-logo-row img{display:block;width:78%;height:62%;object-fit:contain;filter:grayscale(1) invert(1) contrast(1.45);mix-blend-mode:screen}.proto-client-row div{height:88px}.proto-client-row img{width:70%;height:68%;filter:grayscale(1) brightness(0) invert(1);mix-blend-mode:normal}
 
 .proto-logo-row div{position:relative;isolation:isolate;transition:transform .35s ease,border-color .35s ease,background .35s ease,box-shadow .35s ease}.proto-logo-row div:after{content:"";position:absolute;inset:-80% -35%;z-index:-1;background:linear-gradient(105deg,transparent 42%,rgba(255,255,255,.38) 50%,transparent 58%);transform:translateX(-80%) rotate(8deg);transition:transform .7s ease}.proto-logo-row img{transition:filter .35s ease,transform .35s ease,mix-blend-mode .35s ease}.proto-logo-row div:hover{transform:translateY(-6px);border-color:#f1bd4d;background:#fff;box-shadow:0 16px 32px rgba(0,0,0,.28),0 0 24px rgba(226,170,53,.18)}.proto-logo-row div:hover:after{transform:translateX(80%) rotate(8deg)}.proto-logo-row div:hover img{filter:none;mix-blend-mode:normal;transform:scale(1.05)}.proto-client-row div:hover img{filter:none;mix-blend-mode:normal}
@@ -39,7 +39,7 @@
 .country-page{--hero-position:0% center}.country-bangladesh{--hero-position:33.333% center}.country-maldives{--hero-position:66.666% center}.country-dubai{--hero-position:100% center}.country-hero{isolation:isolate;overflow:hidden;background:#0E0730}.country-hero:before{content:"";position:absolute;inset:-2%;z-index:-2;background-image:url('/markets-atlas.png');background-size:400% 100%;background-position:var(--hero-position);background-repeat:no-repeat;filter:saturate(.92) contrast(1.08);transform:scale(1.02);animation:countryHeroDrift 16s cubic-bezier(.2,.65,.25,1) both}.country-hero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(14,7,48,.98) 0%,rgba(14,7,48,.88) 31%,rgba(14,7,48,.38) 60%,rgba(14,7,48,.08) 100%),radial-gradient(circle at 78% 32%,rgba(226,170,53,.2),transparent 28%),linear-gradient(180deg,transparent 62%,rgba(14,7,48,.72));pointer-events:none}.country-hero .proto-hero-copy{z-index:2}.country-hero .proto-hero-copy:before{content:"";position:absolute;left:-28px;top:2px;bottom:7px;width:1px;background:linear-gradient(transparent,var(--gold),transparent);opacity:.65}.country-hero h1{text-shadow:0 8px 32px rgba(0,0,0,.35)}@keyframes countryHeroDrift{from{transform:scale(1.02)}to{transform:scale(1.09) translate3d(-.5%,0,0)}}@media(prefers-reduced-motion:reduce){.country-hero:before{animation:none;transform:scale(1.04)}}@media(max-width:680px){.country-hero:before{background-size:auto 100%;background-position:var(--hero-position)}.country-hero:after{background:linear-gradient(90deg,rgba(14,7,48,.97),rgba(14,7,48,.68) 74%,rgba(14,7,48,.25)),linear-gradient(180deg,transparent 55%,rgba(14,7,48,.78))}}
 
 /* Refined country hero imagery */
-.country-page{--country-hero-image:url('/hero-sri-lanka.png')}.global-landing{--country-hero-image:url('/hero-global.png')}.country-bangladesh{--country-hero-image:url('/hero-bangladesh.png')}.country-maldives{--country-hero-image:url('/hero-maldives.png')}.country-dubai{--country-hero-image:url('/hero-dubai.png')}.country-hero:before{inset:-3%;background-image:var(--country-hero-image);background-size:cover;background-position:center;background-repeat:no-repeat;filter:saturate(1.02) contrast(1.04);will-change:transform;animation:countryHeroBreath 18s ease-in-out infinite}.country-name-badge{display:inline-flex;align-items:center;gap:9px;padding:8px 13px;margin-bottom:13px;border:1px solid rgba(226,170,53,.78);border-radius:999px;background:rgba(14,7,48,.62);box-shadow:0 8px 25px rgba(0,0,0,.22);color:#f1bd4c;font-size:11px;font-weight:900;letter-spacing:.18em;text-transform:uppercase;backdrop-filter:blur(8px)}.country-name-badge:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 12px var(--gold)}@keyframes countryHeroBreath{0%,100%{transform:scale(1.025) translate3d(0,0,0)}50%{transform:scale(1.095) translate3d(-.45%,0,0)}}@media(prefers-reduced-motion:reduce){.country-hero:before{animation:none;transform:scale(1.04)}}@media(max-width:680px){.country-hero:before{background-size:cover;background-position:58% center}}
+.country-page{--country-hero-image:url('/hero-sri-lanka.webp')}.global-landing{--country-hero-image:url('/hero-global.webp')}.country-bangladesh{--country-hero-image:url('/hero-bangladesh.webp')}.country-maldives{--country-hero-image:url('/hero-maldives.webp')}.country-dubai{--country-hero-image:url('/hero-dubai.webp')}.country-hero:before{inset:-3%;background-image:var(--country-hero-image);background-size:cover;background-position:center;background-repeat:no-repeat;filter:saturate(1.02) contrast(1.04);will-change:transform;animation:countryHeroBreath 18s ease-in-out infinite}.country-name-badge{display:inline-flex;align-items:center;gap:9px;padding:8px 13px;margin-bottom:13px;border:1px solid rgba(226,170,53,.78);border-radius:999px;background:rgba(14,7,48,.62);box-shadow:0 8px 25px rgba(0,0,0,.22);color:#f1bd4c;font-size:11px;font-weight:900;letter-spacing:.18em;text-transform:uppercase;backdrop-filter:blur(8px)}.country-name-badge:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 12px var(--gold)}@keyframes countryHeroBreath{0%,100%{transform:scale(1.025) translate3d(0,0,0)}50%{transform:scale(1.095) translate3d(-.45%,0,0)}}@media(prefers-reduced-motion:reduce){.country-hero:before{animation:none;transform:scale(1.04)}}@media(max-width:680px){.country-hero:before{background-size:cover;background-position:58% center}}
 
 /* Landmark-focus depth motion: full hospitality scene → local icon → full scene */
 .country-page{--hero-focus-x:35%;--hero-focus-y:31%;--hero-pan-x:10%}.country-bangladesh{--hero-focus-x:53%;--hero-focus-y:39%;--hero-pan-x:2%}.country-maldives{--hero-focus-x:84%;--hero-focus-y:42%;--hero-pan-x:0%}.country-dubai{--hero-focus-x:45%;--hero-focus-y:21%;--hero-pan-x:0%}.country-hero:before{transform-origin:var(--hero-focus-x) var(--hero-focus-y);animation:countryLandmarkFocus 24s cubic-bezier(.42,0,.2,1) infinite}@keyframes countryLandmarkFocus{0%,12%,88%,100%{transform:scale(1.025) translate3d(0,0,0)}44%,58%{transform:scale(1.25) translate3d(var(--hero-pan-x),0,0)}}
@@ -66,11 +66,11 @@
 
 /* Country-page asset polish: distinct, sharp service photography and uniformly centred logos. */
 .country-service-card .service-photo{background-size:cover;background-position:center;background-repeat:no-repeat}
-.country-service-card .service-photo-1{background-image:url('/service-planning-v2.png')}
-.country-service-card .service-photo-2{background-image:url('/service-equipment-v2.png')}
-.country-service-card .service-photo-3{background-image:url('/service-fabrication-v2.png')}
-.country-service-card .service-photo-4{background-image:url('/service-workflow-v2.png')}
-.country-service-card .service-photo-5{background-image:url('/service-support-v2.png')}
+.country-service-card .service-photo-1{background-image:url('/service-planning-v2.webp')}
+.country-service-card .service-photo-2{background-image:url('/service-equipment-v2.webp')}
+.country-service-card .service-photo-3{background-image:url('/service-fabrication-v2.webp')}
+.country-service-card .service-photo-4{background-image:url('/service-workflow-v2.webp')}
+.country-service-card .service-photo-5{background-image:url('/service-support-v2.webp')}
 .partner-logo-card{padding:12px 16px}
 .partner-logo-card img{width:100%;height:100%;object-fit:contain;object-position:50% 50%}
 .country-logo-row>div{padding:10px 14px}
@@ -102,6 +102,7 @@
 .partner-logo-card img[alt="Aristarco"]{filter:drop-shadow(1px 0 #17223a) drop-shadow(-1px 0 #17223a) drop-shadow(0 1px #17223a) drop-shadow(0 -1px #17223a) drop-shadow(0 2px 2px rgba(14,7,48,.22))}
 .country-signature{transform:none}
 .country-bangladesh .signature-flag img,.market-2 .market-flag img{object-position:43% 50%;transform:scale(1.1)}
+.country-dubai .signature-flag img,.market-4 .market-flag img{object-fit:contain;transform:scale(.92);background:#fff}
 
 @media(max-width:1000px) and (min-width:681px){
   .proto-market-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -165,3 +166,19 @@
 .team-note{margin:20px 0 0;color:#958da5;font-size:9px;text-align:right}
 @media(max-width:1000px){.team-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.team-card{min-height:300px}}
 @media(max-width:680px){.team-showcase{padding-top:42px}.team-intro{grid-template-columns:1fr}.team-intro .country-eyebrow{grid-column:auto}.team-intro h3{font-size:42px}.team-grid{grid-template-columns:1fr}.team-card{min-height:250px;display:grid;grid-template-columns:105px 1fr;gap:18px;align-items:center}.team-monogram{width:100px;height:122px;margin:0}.team-status{grid-column:2;width:max-content;margin-top:-30px}.team-note{text-align:left}}
+
+/* Independent market imagery prevents atlas bleed and distortion at narrow widths. */
+.proto-market{background-size:cover;background-position:center;background-repeat:no-repeat}
+.proto-market.market-1{background-image:linear-gradient(0deg,rgba(2,16,31,.8),rgba(2,16,31,.01) 72%),url('/market-sri-lanka.webp');background-position:center 25%}
+.proto-market.market-2{background-image:linear-gradient(0deg,rgba(2,16,31,.8),rgba(2,16,31,.01) 72%),url('/market-bangladesh.webp')}
+.proto-market.market-3{background-image:linear-gradient(0deg,rgba(2,16,31,.8),rgba(2,16,31,.01) 72%),url('/market-maldives.webp')}
+.proto-market.market-4{background-image:linear-gradient(0deg,rgba(2,16,31,.8),rgba(2,16,31,.01) 72%),url('/market-dubai.webp')}
+
+/* Keep partial carousel pages centered while retaining a consistent six-card rhythm. */
+.partner-logo-row,.client-logo-set{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.partner-logo-card,.client-logo-card{flex:0 1 calc((100% - 50px)/6)}
+@media(max-width:1000px) and (min-width:681px){.partner-logo-card,.client-logo-card{flex-basis:calc((100% - 20px)/3)}}
+@media(max-width:680px){
+  .partner-logo-card,.client-logo-card{flex-basis:calc((100% - 10px)/2)}
+  .partner-logo-row>.partner-logo-card:last-child:nth-child(odd),.client-logo-set>.client-logo-card:last-child:nth-child(odd){width:auto;max-width:calc((100% - 10px)/2)}
+}
