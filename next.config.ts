@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "standalone",
+  /* Next.js default config for standard deployment */
 };
 
 export default nextConfig;

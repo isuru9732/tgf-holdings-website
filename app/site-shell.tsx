@@ -24,7 +24,7 @@ export function Footer() {
     <div className="footer-brand"><Logo/><p>End-to-end commercial kitchen and hospitality solutions across Sri Lanka and regional markets.</p><div className="socials"><a href="#">in</a><a href="#">f</a><a href="#">◎</a></div></div>
     <div><b>Solutions</b><Link href="/solutions#planning">Planning & design</Link><Link href="/solutions#equipment">Equipment solutions</Link><Link href="/solutions#delivery">Project execution</Link><Link href="/contact-support#technical-support">After-sales support</Link></div>
     <div><b>Company</b><Link href="/about">About us</Link><Link href="/projects-brands">Projects & brands</Link><Link href="/contact-support">Contact us</Link><Link href="/contact-support#technical-support">Technical support</Link></div>
-    <div><b>Regional markets</b><a href="#sri-lanka">Sri Lanka</a><a href="#bangladesh">Bangladesh</a><a href="#maldives">Maldives</a><a href="#dubai">Dubai</a></div>
+    <div><b>Regional markets</b><a href="#sri-lanka">Sri Lanka</a><a href="#bangladesh">Bangladesh</a><a href="#maldives">Maldives</a><a href="#dubai">UAE</a></div>
     <div><b>Get in touch</b><a href="tel:+94727568612">+94 72 756 8612</a><a href="mailto:info@tgfholding.com">info@tgfholding.com</a><span>Colombo, Sri Lanka</span></div>
     <p className="fineprint">© 2026 The Global Food Holding (Pvt) Ltd. All rights reserved. <span>Corporate facts and regional links subject to client confirmation.</span></p>
   </footer>;

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <radialGradient id="oceanGrad" cx="38%" cy="32%" r="68%">
+      <stop offset="0%" stop-color="#1e3a6a"/>
+      <stop offset="55%" stop-color="#0f2142"/>
+      <stop offset="100%" stop-color="#081226"/>
+    </radialGradient>
+    <linearGradient id="goldLand" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f7d77b"/>
+      <stop offset="60%" stop-color="#e2aa35"/>
+      <stop offset="100%" stop-color="#b88318"/>
+    </linearGradient>
+    <radialGradient id="globeGloss" cx="35%" cy="25%" r="65%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="45%" stop-color="#ffffff" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.55"/>
+    </radialGradient>
+    <filter id="globeGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#e2aa35" flood-opacity="0.25"/>
+    </filter>
+    <clipPath id="globeClip">
+      <circle cx="64" cy="64" r="58"/>
+    </clipPath>
+  </defs>
+
+  <!-- Outer gold accent border -->
+  <circle cx="64" cy="64" r="60" fill="none" stroke="#e2aa35" stroke-width="2.5" opacity="0.85"/>
+
+  <!-- Globe Ocean base -->
+  <g clip-path="url(#globeClip)">
+    <circle cx="64" cy="64" r="58" fill="url(#oceanGrad)"/>
+
+    <!-- Graticule lines (Latitude / Longitude) -->
+    <ellipse cx="64" cy="64" rx="58" ry="24" fill="none" stroke="#e2aa35" stroke-width="0.8" opacity="0.32"/>
+    <ellipse cx="64" cy="64" rx="58" ry="42" fill="none" stroke="#e2aa35" stroke-width="0.8" opacity="0.28"/>
+    <line x1="6" y1="64" x2="122" y2="64" stroke="#e2aa35" stroke-width="1.1" opacity="0.45"/>
+    <ellipse cx="64" cy="64" rx="25" ry="58" fill="none" stroke="#e2aa35" stroke-width="0.8" opacity="0.32"/>
+    <ellipse cx="64" cy="64" rx="43" ry="58" fill="none" stroke="#e2aa35" stroke-width="0.8" opacity="0.28"/>
+    <line x1="64" y1="6" x2="64" y2="122" stroke="#e2aa35" stroke-width="1.1" opacity="0.45"/>
+
+    <!-- Continents: Europe, Africa, Middle East, Asia, Australia -->
+    <!-- Africa -->
+    <path fill="url(#goldLand)" d="M52,50 C54,48 58,49 61,53 C64,56 68,57 69,63 C70,68 67,73 63,78 C60,82 58,89 54,87 C50,85 47,78 45,74 C43,70 41,65 44,61 C46,58 48,58 50,54 Z"/>
+    <!-- Madagascar -->
+    <path fill="url(#goldLand)" d="M72,78 C73,77 74,78 73,82 C72,85 71,84 70,81 Z"/>
+    <!-- Europe -->
+    <path fill="url(#goldLand)" d="M51,36 C54,34 58,35 60,38 C62,40 60,44 57,46 C54,47 52,45 49,43 C47,41 48,38 51,36 Z"/>
+    <!-- Scandinavia / UK -->
+    <path fill="url(#goldLand)" d="M55,27 C57,26 59,28 58,32 C56,34 54,33 53,30 Z M46,35 C47,33 49,34 48,37 C47,39 45,38 46,35 Z"/>
+    <!-- Middle East / Arabia -->
+    <path fill="url(#goldLand)" d="M66,51 C69,49 74,51 76,55 C77,58 75,62 72,64 C70,63 68,59 66,56 Z"/>
+    <!-- Asia / India / East Asia -->
+    <path fill="url(#goldLand)" d="M64,36 C70,33 80,34 88,38 C94,41 97,47 95,54 C92,58 87,60 83,57 C80,55 78,51 75,48 C72,45 68,44 64,43 Z"/>
+    <path fill="url(#goldLand)" d="M77,55 C80,55 83,58 82,62 C80,67 76,66 75,60 Z"/>
+    <path fill="url(#goldLand)" d="M89,52 C93,52 97,56 95,62 C92,66 88,64 87,58 Z"/>
+    <!-- Southeast Asia & Indonesia -->
+    <path fill="url(#goldLand)" d="M89,68 C92,67 95,68 94,70 C92,72 89,71 89,68 Z M97,71 C100,70 102,72 100,74 C97,75 96,73 97,71 Z"/>
+    <!-- Australia -->
+    <path fill="url(#goldLand)" d="M97,81 C103,79 109,82 110,88 C110,94 105,97 99,96 C94,95 93,89 95,84 Z"/>
+    <!-- Americas (west edge hint) -->
+    <path fill="url(#goldLand)" d="M12,42 C16,40 22,44 24,50 C26,56 22,63 18,66 C15,64 13,58 11,52 Z" opacity="0.65"/>
+    <path fill="url(#goldLand)" d="M18,74 C21,72 25,75 25,80 C24,86 20,91 16,90 C14,88 15,81 18,74 Z" opacity="0.65"/>
+
+    <!-- Sphere 3D shading & gloss overlay -->
+    <circle cx="64" cy="64" r="58" fill="url(#globeGloss)"/>
+    <!-- Highlight crescent -->
+    <path d="M18,32 C26,20 42,12 60,12 C44,17 32,30 28,46 C26,53 26,60 27,66 C21,55 17,44 18,32 Z" fill="#ffffff" opacity="0.28"/>
+  </g>
+
+  <!-- Golden rim ring -->
+  <circle cx="64" cy="64" r="58" fill="none" stroke="#f3c55a" stroke-width="1.8" opacity="0.6"/>
+</svg>
