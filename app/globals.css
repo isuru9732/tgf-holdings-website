@@ -203,3 +203,24 @@
   .partner-carousel-slide .partner-logo-card{height:92px;padding:10px 14px}
 }
 
+/* Refined Navigation Bar & Compact Gold Pill CTA (Right-aligned like original) */
+.header .logo-link{margin-right:auto !important}
+.header .desktop-nav{display:flex !important;align-items:center !important;gap:30px !important;margin-left:auto !important;margin-right:28px !important}
+.header .desktop-nav a,
+.header .desktop-nav .nav-item-link{font-size:13px !important;text-transform:uppercase !important;font-weight:700 !important;letter-spacing:.08em !important;color:#f0ecf7 !important;padding:26px 0 !important;position:relative !important;transition:color .2s ease !important}
+.header .desktop-nav a:hover,
+.header .desktop-nav .nav-item-link:hover{color:#ffffff !important}
+.header .desktop-nav a:after,
+.header .desktop-nav .nav-item-link:after{content:"";height:2.5px;position:absolute;left:0;right:0;bottom:18px;background:var(--gold);transform:scaleX(0);transform-origin:center;transition:transform .22s ease}
+.header .desktop-nav a:hover:after,
+.header .desktop-nav .nav-item-link:hover:after{transform:scaleX(1)}
+
+.header .header-cta.header-cta-pill,
+.header-cta-pill{margin-left:0 !important;padding:9px 22px !important;height:auto !important;border-radius:999px !important;font-size:12px !important;font-weight:700 !important;letter-spacing:.02em !important;gap:9px !important;background:linear-gradient(135deg,#f5c452,#e2aa35) !important;color:#0b0526 !important;border:1px solid rgba(226,170,53,.9) !important;box-shadow:0 3px 12px rgba(226,170,53,.22) !important;transition:all .2s ease !important}
+.header .header-cta.header-cta-pill:hover,
+.header-cta-pill:hover{transform:translateY(-1.5px) !important;box-shadow:0 6px 20px rgba(226,170,53,.42) !important;background:linear-gradient(135deg,#ffcf66,#edb742) !important}
+.header .header-cta.header-cta-pill span,
+.header-cta-pill span{font-size:14px !important;transition:transform .2s ease !important}
+.header .header-cta.header-cta-pill:hover span,
+.header-cta-pill:hover span{transform:translateX(3px) !important}
+

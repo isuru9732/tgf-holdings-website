@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Global Food Holding - Navigation Bar Live Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #0E0730;
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      color: #FFFFFF;
+      overflow-x: hidden;
+    }
+    :root {
+      --gold: #E2AA35;
+      --gold2: #FFC64D;
+      --navy: #0E0730;
+      --navy2: #130B3F;
+      --line: rgba(225, 178, 97, 0.45);
+    }
+
+    /* Live Header Replication (100% Accurate) */
+    .header {
+      height: 76px;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      padding: 0 3vw;
+      background: rgba(14, 7, 48, 0.96);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(225, 178, 97, 0.55);
+    }
+
+    /* Logo lockup */
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: #fff;
+      margin-right: auto;
+      transition: opacity 0.2s ease;
+    }
+    .logo-link:hover {
+      opacity: 0.85;
+    }
+    .logo-symbol {
+      width: 38px;
+      height: 38px;
+      border: 1.5px solid var(--gold);
+      border-radius: 6px;
+      display: grid;
+      place-items: center;
+      color: var(--gold);
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 16px;
+      background: rgba(226, 170, 53, 0.1);
+      box-shadow: 0 0 12px rgba(226, 170, 53, 0.2);
+    }
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+    .logo-text b {
+      font-family: 'Playfair Display', serif;
+      font-size: 15px;
+      letter-spacing: 0.05em;
+      color: #FFFFFF;
+      line-height: 1.1;
+    }
+    .logo-text small {
+      font-size: 9px;
+      color: var(--gold);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    /* Navigation Links - Right-aligned next to CTA */
+    .desktop-nav {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      margin-left: auto;
+      margin-right: 28px;
+    }
+    .desktop-nav a {
+      font-size: 13px;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: #F0ECF7;
+      text-decoration: none;
+      padding: 26px 0;
+      position: relative;
+      transition: color 0.2s ease;
+    }
+    .desktop-nav a:hover,
+    .desktop-nav a.active {
+      color: #FFFFFF;
+    }
+    .desktop-nav a:after {
+      content: "";
+      height: 2.5px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 18px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.22s ease;
+    }
+    .desktop-nav a:hover:after,
+    .desktop-nav a.active:after {
+      transform: scaleX(1);
+    }
+
+    /* Compact Gold Pill Button */
+    .header-cta {
+      margin-left: 0;
+      padding: 9px 22px;
+      height: auto;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 9px;
+      text-decoration: none;
+      background: linear-gradient(135deg, #F5C452, #E2AA35);
+      color: #0B0526;
+      border: 1px solid rgba(226, 170, 53, 0.9);
+      box-shadow: 0 3px 12px rgba(226, 170, 53, 0.22);
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+    .header-cta:hover {
+      transform: translateY(-1.5px);
+      box-shadow: 0 6px 20px rgba(226, 170, 53, 0.42);
+      background: linear-gradient(135deg, #FFCF66, #EDB742);
+    }
+    .header-cta span {
+      font-size: 14px;
+      transition: transform 0.2s ease;
+    }
+    .header-cta:hover span {
+      transform: translateX(3px);
+    }
+
+    /* Hero section backdrop for context */
+    .hero-mockup {
+      padding: 100px 3vw 120px;
+      background: linear-gradient(90deg, rgba(14, 7, 48, 0.97), rgba(14, 7, 48, 0.72) 45%, rgba(14, 7, 48, 0.15) 85%),
+                  url('/kitchen-hero.jpg') center/cover no-repeat;
+      min-height: 480px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .hero-eyebrow {
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(34px, 4vw, 54px);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      max-width: 680px;
+    }
+    .hero-title em {
+      color: var(--gold);
+      font-style: italic;
+    }
+    .hero-desc {
+      color: #D4CFDF;
+      font-size: 14.5px;
+      line-height: 1.6;
+      max-width: 580px;
+      margin-bottom: 30px;
+    }
+    .badge-bar {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 16px;
+      background: rgba(19, 11, 63, 0.85);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      font-size: 12px;
+      color: #E2AA35;
+      width: fit-content;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 100% ACCURATE LIVE HEADER -->
+  <header class="header">
+    <a href="#" class="logo-link" aria-label="TGF Global home">
+      <div class="logo-symbol">TGF</div>
+      <div class="logo-text">
+        <b>The Global Food</b>
+        <small>Holding</small>
+      </div>
+    </a>
+
+    <!-- Right-aligned navigation links -->
+    <nav class="desktop-nav" aria-label="Page sections">
+      <a href="#" class="active">Home</a>
+      <a href="#">Solutions</a>
+      <a href="#">Projects &amp; Brands</a>
+      <a href="#">About Us</a>
+      <a href="#">Contact &amp; Support</a>
+    </nav>
+
+    <!-- Compact Gold Pill Button -->
+    <a class="header-cta" href="#contact-support">
+      Discuss Your Project <span>&rarr;</span>
+    </a>
+  </header>
+
+  <!-- Live context preview section -->
+  <section class="hero-mockup">
+    <div class="hero-eyebrow">Flavour is engineered &bull; Live Preview</div>
+    <h1 class="hero-title">Engineering Excellence in <em>Commercial Foodservice</em></h1>
+    <p class="hero-desc">
+      Notice how the navigation menu items are prominently readable and naturally draw user focus to the right, while the compact gold pill CTA sits cleanly beside them without overpowering the bar.
+    </p>
+    <div class="badge-bar">
+      <span>&#10003; 13px Bold Uppercase Links</span>
+      <span>&bull;</span>
+      <span>&#10003; Right-Aligned Layout Restored</span>
+      <span>&bull;</span>
+      <span>&#10003; Compact 38px Gold Pill CTA</span>
+    </div>
+  </section>
+
+</body>
+</html>

@@ -1,55 +1,30 @@
-# Partner Brands Smooth Auto-Sliding Carousel (Button-Free)
+# Implementation Plan: Navigation Bar Visual Hierarchy & Typography Polish
 
-Upgrade **Our partner brands** to a clean, button-free auto-sliding carousel powered by an animated slide track and refined clickable progress dots.
-
-## User Review & Critical Decisions
-
-> [!IMPORTANT]
-> The user confirmed they are **not comfortable with Prev and Next buttons** and selected **smooth auto-sliding with clickable progress dots**. Prev/Next arrow buttons will be completely omitted for a clean, minimalist layout.
-
-- **Button-Free Design**: Zero arrow buttons. The layout remains clean, balanced, and uncluttered.
-- **Motion & Sliding**: Uses a continuous horizontal slide track (`transform: translateX(-${active * 100}%)`) with smooth CSS transition curves (`cubic-bezier(0.25, 1, 0.5, 1)`).
-- **Control Mechanism**: High-visibility clickable gold progress dots beneath the logos, allowing instant page selection.
-- **Auto-Play**: Automatic progression every 4.5 seconds with graceful pause on hover/touch.
-- **Preserved Components**: The premier hotel clients static grid and all other site sections remain completely untouched.
+> **Status:** Approved and Implemented ✅
 
 ---
 
-### 1. Root Cause & Architecture Upgrade
+## 1. Overview of Completed Changes
 
-1. **Why the previous version failed to work**:
-   - The original component replaced the DOM elements in place (`groups[active]`) rather than sliding a track. When images swapped, it felt like a glitch rather than a carousel.
-   - Mouse hover or focus events would freeze the timer indefinitely.
-2. **Upgraded Implementation**:
-   - Render all brand groups side-by-side in an `overflow: hidden` sliding track.
-   - Smoothly animate the track's horizontal offset based on the active index.
-   - Reliable auto-play timer that cycles through all partner groups (0 to N-1) smoothly.
-   - Refined clickable progress indicator dots with gold active expansion and subtle hover feedback.
+### A. Right-Side Navigation Alignment
+- `.header .logo-link`: Anchored to the far left with `margin-right: auto`.
+- `.header .desktop-nav`: Styled with `display: flex`, `gap: 30px`, `margin-left: auto`, and `margin-right: 28px`, grouping all menu items to the right side next to the CTA button exactly like the original design.
+- `.header .header-cta`: Positioned directly beside the navigation links with `margin-left: 0`.
 
----
+### B. Typography & Legibility
+- **Font Size**: Increased from `10px` to **`13px`** uppercase.
+- **Font Weight & Letter-Spacing**: `700` (bold) with `0.08em` letter-spacing.
+- **Color & Contrast**: High-contrast ivory (`#F0ECF7`), transitioning to pure white (`#FFFFFF`) on hover.
+- **Hover Indicator**: Gold bottom border line (`height: 2.5px`, `background: var(--gold)`) expanding from the center.
 
-### 2. User Experience & Visual Design
-
-- **Slide Track**:
-  - Viewport container with `width: 100%; overflow: hidden; position: relative`.
-  - Internal track with `display: flex; transition: transform 0.65s cubic-bezier(0.25, 1, 0.5, 1)`.
-  - Each slide is `flex: 0 0 100%` and houses 6 partner brand cards in a balanced responsive row.
-- **Clickable Progress Dots**:
-  - Centered below the carousel with comfortable tap targets (accessible and easy to click).
-  - Inactive dots: subtle translucent gold rings/dots (`rgba(226, 170, 53, 0.35)`).
-  - Active dot: expands into a luminous gold pill (`rgba(226, 170, 53, 1)` with subtle glow).
-- **Hover & Touch**:
-  - Pauses auto-sliding when the user hovers over a logo to inspect it, resuming automatically when the cursor leaves.
+### C. Compact Gold Pill CTA Button ("Discuss Your Project")
+- **Shape**: Rounded pill capsule (`border-radius: 999px`).
+- **Dimensions**: Trimmed padding to **`9px 22px`** (down from `16px 20px`), keeping the button proportionate and preventing it from overpowering the header.
+- **Color & Typography**: Dark navy text (`#0B0526`), font size `12px` bold, with a refined `9px` icon gap on a warm champagne-gold gradient (`#F5C452` to `#E2AA35`).
 
 ---
 
-### 3. File Changes
-
-- `app/partner-carousel.tsx`:
-  - Implement full-track sliding layout for the partner variant (`transform: translateX(-${active * 100}%)`).
-  - Auto-play effect with interval and pause-on-hover.
-  - Interactive pagination dots without any prev/next buttons.
-  - Keep the `variant === "clients"` static premier hotel grid intact.
-- `app/globals.css`:
-  - Add styles for `.partner-slider-viewport`, `.partner-slider-track`, `.partner-slide`, and updated `.partner-carousel-controls`.
-  - Ensure zero collision with existing classes.
+## 2. Verification
+- `npm run lint`: Completed successfully (0 errors).
+- `compile_applet`: Production build compiled and verified.
+- Dev server running live on port 3000.
