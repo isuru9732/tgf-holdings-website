@@ -21,8 +21,7 @@ FILES = [
     "client-sheraton.png", "client-movenpick.png", "client-westin.png", "client-hilton.png",
 ]
 
-CANVAS = (720, 300)
-MAX_CONTENT = (610, 190)
+PADDING_RATIO = 0.035
 
 
 def visible_bbox(image: Image.Image):
@@ -43,11 +42,13 @@ for filename in FILES:
     source = SOURCE / filename
     image = Image.open(source).convert("RGBA")
     cropped = image.crop(visible_bbox(image))
-    scale = min(MAX_CONTENT[0] / cropped.width, MAX_CONTENT[1] / cropped.height)
-    size = (max(1, round(cropped.width * scale)), max(1, round(cropped.height * scale)))
-    cropped = cropped.resize(size, Image.Resampling.LANCZOS)
-    canvas = Image.new("RGBA", CANVAS, (255, 255, 255, 0))
-    canvas.alpha_composite(cropped, ((CANVAS[0] - size[0]) // 2, (CANVAS[1] - size[1]) // 2))
+    padding = max(8, round(max(cropped.size) * PADDING_RATIO))
+    canvas = Image.new(
+        "RGBA",
+        (cropped.width + padding * 2, cropped.height + padding * 2),
+        (255, 255, 255, 0),
+    )
+    canvas.alpha_composite(cropped, (padding, padding))
     canvas.save(TARGET / f"{Path(filename).stem}.png", optimize=True)
 
 print(f"Normalised {len(FILES)} logos into {TARGET}")

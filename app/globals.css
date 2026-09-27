@@ -156,8 +156,9 @@
 .client-static-card:hover{transform:translateY(-4px);border-color:#e2aa35;box-shadow:0 16px 32px -4px rgba(226,170,53,.32),0 0 18px rgba(226,170,53,.2)}
 .client-static-card img{display:block;width:100%;height:100%;max-width:100%;max-height:72px;object-fit:contain;object-position:center;filter:contrast(1.06) saturate(1.02);transition:transform .25s ease}
 .client-static-card:hover img{transform:scale(1.04)}
+.client-static-grid>.client-static-card:nth-last-child(2):nth-child(4n+1){grid-column:2}
 @media(max-width:1000px) and (min-width:681px){.client-static-grid{grid-template-columns:repeat(4,1fr);gap:10px}.client-static-card{height:98px;padding:12px 16px}}
-@media(max-width:680px){.client-static-grid{grid-template-columns:repeat(2,1fr);gap:10px}.client-static-card{height:92px;padding:10px 14px}.client-static-card img{max-height:60px}}
+@media(max-width:680px){.client-static-grid{grid-template-columns:repeat(2,1fr);gap:10px}.client-static-card{height:92px;padding:10px 14px}.client-static-card img{max-height:60px}.client-static-grid>.client-static-card:nth-last-child(2):nth-child(4n+1){grid-column:auto}}
 
 /* Editorial team showcase: ready for confirmed portraits and biographies. */
 .team-showcase{grid-column:1/-1;margin-top:18px;padding-top:58px;border-top:1px solid rgba(226,170,53,.38)}
@@ -205,6 +206,19 @@
 
 /* Refined Navigation Bar & Compact Gold Pill CTA (Right-aligned like original) */
 .header .logo-link{margin-right:auto !important}
+
+/* Legacy content restored within the current country-page visual system. */
+.country-about{column-gap:8vw;row-gap:32px;padding-top:64px;padding-bottom:64px}
+.mission-vision{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.mission-vision article{padding:26px;border:1px solid rgba(226,170,53,.38);border-radius:8px;background:rgba(14,7,48,.34)}
+.mission-vision p{margin:0;color:#d2cddd;font-size:13px;line-height:1.7}
+.team-bio{margin-top:10px!important;color:#aeb1c5!important;font-size:10px!important;line-height:1.55!important}
+.legacy-contact{grid-column:1/-1;display:grid;grid-template-columns:1fr 1.35fr 1.2fr 1.2fr;gap:12px;margin-top:6px}
+.legacy-contact article{min-width:0;padding:20px;border:1px solid rgba(226,170,53,.4);border-radius:7px;background:rgba(14,7,48,.5);display:flex;flex-direction:column;gap:7px}
+.legacy-contact b{color:var(--gold);font-size:10px;letter-spacing:.11em;text-transform:uppercase}
+.legacy-contact a,.legacy-contact address{color:#d4cfdf;font-size:10px;line-height:1.55;font-style:normal}
+@media(max-width:1000px){.legacy-contact{grid-template-columns:1fr 1fr}}
+@media(max-width:680px){.country-about{row-gap:24px;padding-top:48px;padding-bottom:48px}.mission-vision,.legacy-contact{grid-template-columns:1fr}.legacy-contact{margin-top:8px}}
 .header .desktop-nav{display:flex !important;align-items:center !important;gap:30px !important;margin-left:auto !important;margin-right:28px !important}
 .header .desktop-nav a,
 .header .desktop-nav .nav-item-link{font-size:13px !important;text-transform:uppercase !important;font-weight:700 !important;letter-spacing:.08em !important;color:#f0ecf7 !important;padding:26px 0 !important;position:relative !important;transition:color .2s ease !important}

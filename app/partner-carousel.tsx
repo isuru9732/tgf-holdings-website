@@ -94,25 +94,10 @@ export function PartnerCarousel({
   };
 
   if (isClients) {
-    const premierHotelNames = [
-      "Sheraton",
-      "Mövenpick",
-      "Westin",
-      "Hilton",
-      "Cinnamon",
-      "Shangri-La",
-      "Marriott",
-      "LAUGFS Leisure",
-    ];
-    const premierBrands = premierHotelNames
-      .map((name) => brands.find((b) => b[0].toLowerCase() === name.toLowerCase()))
-      .filter((b): b is PartnerBrand => Boolean(b));
-    const displayBrands = premierBrands.length >= 6 ? premierBrands : brands.slice(0, 8);
-
     return (
       <div className="client-static-showcase" aria-label="Trusted by leading brands">
         <div className="client-static-grid">
-          {displayBrands.map(([name, src]) => (
+          {brands.map(([name, src]) => (
             <div className="client-static-card" key={name} title={name}>
               <img src={src} alt={name} loading="lazy" decoding="async" />
             </div>
