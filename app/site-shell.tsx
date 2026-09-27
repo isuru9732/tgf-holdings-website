@@ -6,8 +6,8 @@ const nav = [
   ["/about", "About Us"], ["/contact-support", "Contact & Support"],
 ];
 
-export function Logo({withTagline = true}:{withTagline?: boolean}) {
-  return <span className="logo-lockup"><img src="/tgf-logo.svg" alt="The Global Food Holding" width={42} height={42}/><span className="logo-text"><b>The Global Food Holding</b>{withTagline && <small>Were the trust is assured</small>}</span></span>;
+export function Logo() {
+  return <span className="logo-lockup"><img src="/tgf-logo.png" alt="TGF Holding"/><span><b>The Global Food</b><small>Holding</small></span></span>;
 }
 
 export function Header({active}:{active:string}) {
