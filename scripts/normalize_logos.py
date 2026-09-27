@@ -18,6 +18,7 @@ FILES = [
     "client-special-37.png", "client-special-38.png", "client-special-39.png",
     "client-special-40.png", "international-22.jpg", "international-24.jpg",
     "international-25.jpg", "international-26.jpg",
+    "client-sheraton.png", "client-movenpick.png", "client-westin.png", "client-hilton.png",
 ]
 
 CANVAS = (720, 300)

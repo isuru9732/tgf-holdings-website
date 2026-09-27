@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "https://tgfholding.com"),
   title,
   description,
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/tgf-logo.png",
+  },
   openGraph: {
     title,
     description,
