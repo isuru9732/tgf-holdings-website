@@ -1,4 +1,6 @@
-# TGF Website Post Integration Verification
+# TGF Website Post Integration Verification — Historical Snapshot
+
+**Superseded on 24 October 2026.** This report describes the earlier implementation and contains statements that are no longer current, including the portrait count, Google Business link, and generic Bangladesh/UAE project cards. Use [the current content reconciliation inventory](CONTENT-RECONCILIATION-INVENTORY.md) for the website's present state.
 
 **Checked:** 14 October 2026  
 **Sources checked:** client content request, active website source, local preview routes, and supplied assets.
@@ -39,4 +41,3 @@ The website has been updated at the project owner's direction. The source DOCX s
 ## Client-ready statement
 
 Do not state that all website content has received client approval. A safe status update is: **“The requested content has been implemented and technically verified. Final factual and publication approval is still required for the items in the verification table.”**
-
