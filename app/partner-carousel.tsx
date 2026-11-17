@@ -98,8 +98,8 @@ export function PartnerCarousel({
       <div className="client-static-showcase" aria-label="Trusted by leading brands">
         <div className="client-static-grid">
           {brands.map(([name, src]) => (
-            <div className="client-static-card" key={name} title={name}>
-              <img src={src} alt={name} loading="lazy" decoding="async" />
+            <div className={name === "Crystal Sands" ? "client-static-card client-static-card--crystal-sands" : "client-static-card"} key={name} title={name}>
+              {name === "Crystal Sands" ? <span className="crystal-sands-logo" role="img" aria-label={name}/> : <img src={src} alt={name} loading="lazy" decoding="async" />}
             </div>
           ))}
         </div>
