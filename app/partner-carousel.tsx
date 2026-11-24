@@ -99,7 +99,7 @@ export function PartnerCarousel({
         <div className="client-static-grid">
           {brands.map(([name, src]) => (
             <div className={name === "Crystal Sands" ? "client-static-card client-static-card--crystal-sands" : "client-static-card"} key={name} title={name}>
-              {name === "Crystal Sands" ? <span className="crystal-sands-logo" role="img" aria-label={name}/> : <img src={src} alt={name} loading="lazy" decoding="async" />}
+              {name === "Crystal Sands" ? <span className="crystal-sands-logo" role="img" aria-label={name}><strong>Crystal Sands</strong><i/><small>Villas in the Sky</small></span> : <img src={src} alt={name} loading="lazy" decoding="async" />}
             </div>
           ))}
         </div>
