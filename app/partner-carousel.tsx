@@ -34,8 +34,30 @@ export function PartnerCarousel({
     return result;
   }, [brands, isClients]);
 
+  const clientSlides = useMemo(() => {
+    if (!isClients || !brands || brands.length === 0) return [];
+
+    const chunkSize = 16;
+    const result: PartnerBrand[][] = [];
+    for (let i = 0; i < brands.length; i += chunkSize) {
+      const chunk = brands.slice(i, i + chunkSize) as PartnerBrand[];
+      if (chunk.length < chunkSize && brands.length >= chunkSize) {
+        result.push([...chunk, ...brands.slice(0, chunkSize - chunk.length)] as PartnerBrand[]);
+      } else {
+        result.push(chunk);
+      }
+    }
+    return result;
+  }, [brands, isClients]);
+
+  const newlyAddedClients = useMemo(
+    () => new Set(brands.slice(8, 21).map(([name]) => name)),
+    [brands],
+  );
+
   const [active, setActive] = useState(0);
   const [userInteracted, setUserInteracted] = useState(false);
+  const [clientPaused, setClientPaused] = useState(false);
   const resumeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const touchStartX = useRef<number | null>(null);
   const touchStartY = useRef<number | null>(null);
@@ -62,6 +84,16 @@ export function PartnerCarousel({
 
     return () => clearInterval(timer);
   }, [isClients, userInteracted, slides.length, active]);
+
+  useEffect(() => {
+    if (!isClients || clientPaused || clientSlides.length < 2) return;
+
+    const timer = setInterval(() => {
+      setActive((current) => (current + 1) % clientSlides.length);
+    }, 4000);
+
+    return () => clearInterval(timer);
+  }, [isClients, clientPaused, clientSlides.length]);
 
   // Clean up timer on unmount
   useEffect(() => {
@@ -94,15 +126,18 @@ export function PartnerCarousel({
   };
 
   if (isClients) {
+    const visibleClients = clientSlides[active] ?? clientSlides[0] ?? [];
+    const extraLargeClients = new Set(["Sofia Colombo City Hotel", "Bally's Entertainment Sri Lanka", "Marino Beach Hotel Colombo", "CIC Nurturing Life"]);
     return (
-      <div className="client-static-showcase" aria-label="Trusted by leading brands">
+      <div className="client-static-showcase" aria-label="Trusted by leading brands" onMouseEnter={() => setClientPaused(true)} onMouseLeave={() => setClientPaused(false)}>
         <div className="client-static-grid">
-          {brands.map(([name, src], index) => (
-            <div className={name === "Crystal Sands" ? "client-static-card client-static-card--crystal-sands" : `client-static-card${index >= 8 && index <= 20 ? " client-static-card--new-client" : ""}${["Sofia Colombo City Hotel", "Bally's Entertainment Sri Lanka", "Marino Beach Hotel Colombo", "CIC Nurturing Life"].includes(name) ? " client-static-card--extra-large" : ""}`} key={name} title={name}>
-              {name === "Crystal Sands" ? <span className="crystal-sands-logo" role="img" aria-label={name}><strong>Crystal Sands</strong><i/><small>Villas in the Sky</small></span> : <img src={src} alt={name} loading="lazy" decoding="async" />}
+          {visibleClients.map(([name, src], index) => (
+            <div className={name === "Crystal Sands" ? "client-static-card client-static-card--crystal-sands" : `client-static-card${newlyAddedClients.has(name) ? " client-static-card--new-client" : ""}${extraLargeClients.has(name) ? " client-static-card--extra-large" : ""}`} key={index} title={name}>
+              {name === "Crystal Sands" ? <span className="crystal-sands-logo client-logo-stage" key={`${active}-${name}-${index}`} role="img" aria-label={name}><strong>Crystal Sands</strong><i/><small>Villas in the Sky</small></span> : <img className="client-logo-stage" key={`${active}-${name}-${index}`} src={src} alt={name} loading="lazy" decoding="async" />}
             </div>
           ))}
         </div>
+        <div className="client-rotation-status" aria-hidden="true">{clientSlides.map((_, index) => <span className={index === active ? "active" : ""} key={index}/>)}</div>
       </div>
     );
   }
