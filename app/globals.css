@@ -285,3 +285,14 @@
   .header .mobile-menu nav{top:68px}
 }
 
+/* Production asset fallback: Vercel intermittently omitted these tracked public files. */
+.country-page{--country-hero-image:url('https://raw.githubusercontent.com/isuru9732/tgf-holdings-website/main/public/hero-sri-lanka.webp')}
+.global-landing{--country-hero-image:url('https://raw.githubusercontent.com/isuru9732/tgf-holdings-website/main/public/hero-global.webp')}
+.country-bangladesh{--country-hero-image:url('https://raw.githubusercontent.com/isuru9732/tgf-holdings-website/main/public/hero-bangladesh.webp')}
+.country-maldives{--country-hero-image:url('https://raw.githubusercontent.com/isuru9732/tgf-holdings-website/main/public/hero-maldives.webp')}
+.country-dubai{--country-hero-image:url('https://raw.githubusercontent.com/isuru9732/tgf-holdings-website/main/public/hero-dubai.webp')}
+.country-hero:before{background-image:var(--country-hero-image)}
+.proto-market{background-image:linear-gradient(0deg,rgba(2,16,31,.78),rgba(2,16,31,.01) 72%),url('https://raw.githubusercontent.com/isuru9732/tgf-holdings-website/main/public/markets-atlas.png')}
+.proto-market.market-global{background-image:linear-gradient(0deg,rgba(2,16,31,.85),rgba(2,16,31,.08) 72%),url('https://raw.githubusercontent.com/isuru9732/tgf-holdings-website/main/public/hero-global.webp')}
+.service-photo,.service-photo-2,.service-photo-5{background-image:url('https://raw.githubusercontent.com/isuru9732/tgf-holdings-website/main/public/services-atlas.webp')}
+
