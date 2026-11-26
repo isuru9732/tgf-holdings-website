@@ -26,7 +26,7 @@ const portraitByName:Record<string,string>={
   "Prageeth Jayathilake FCSI":"/images/leadership/prageeth.jpeg",
   "Kapila Ranaweera":"/images/leadership/kapila.jpeg",
   "Adnan Marikkar":"/images/leadership/adnan_marikkar.jpeg",
-  "Advocate Masuma Akter Mithila":"/images/leadership/advocate_masuma_akter_mithila.jpeg",
+  "Advocate Masuma Akter Mithila":"/images/leadership/advocate_masuma_akter_mithila.png",
   "Zaved Iqbal Mridha":"/images/leadership/zaved-iqbal-mridha.png",
   "Dr. Shah MH Jewel":"/images/leadership/dr-shah-mh-jewel.png",
   // The supplied filename is retained, while the profile key uses the client's correct name.
@@ -92,7 +92,7 @@ const clients:readonly PartnerBrand[]=[
 const contacts:Record<CountryKey,readonly ContactItem[]>={
   "sri-lanka":[{label:"Email",value:"md@tgfholding.com",href:"mailto:md@tgfholding.com"},{label:"Mr Thushara",value:"+94 72 756 8612",href:"tel:+94727568612"},{label:"Mr Prageeth",value:"+94 77 716 6233",href:"tel:+94777166233"},{label:"Mr Darren",value:"+971 50 712 1320",href:"tel:+971507121320"},{label:"Mr Sudesh",value:"+94 71 606 0388",href:"tel:+94716060388"}],
   maldives:[{label:"Email",value:"kapila@tgfholding.com",href:"mailto:kapila@tgfholding.com"},{label:"Email",value:"adnan@tgfholding.com",href:"mailto:adnan@tgfholding.com"},{label:"Mr Kapila",value:"+960 7326145",href:"tel:+9607326145"},{label:"Mr Adnan",value:"+960 7535911",href:"tel:+9607535911"},{label:"Mr Prageeth",value:"+94 77 716 6233",href:"tel:+94777166233"}],
-  bangladesh:[{label:"Email",value:"md@tgfholding.com",href:"mailto:md@tgfholding.com"},{label:"Email",value:"zaman@tgfholding.com",href:"mailto:zaman@tgfholding.com"},{label:"Bangladesh office",value:"+88 018 4419 1616",href:"tel:+8801844191616"},{label:"Mr Gunawardhana",value:"+94 72 756 8612",href:"tel:+94727568612"},{label:"Mr Zaman",value:"+44 794 7411 741",href:"tel:+447947411741"}],
+  bangladesh:[{label:"Email",value:"md@tgfholding.com",href:"mailto:md@tgfholding.com"},{label:"Email",value:"sales.bd@tgfholding.com",href:"mailto:sales.bd@tgfholding.com"},{label:"Bangladesh office",value:"+88 01844617696",href:"tel:+8801844617696"},{label:"Mr Gunawardhana",value:"+94 72 756 8612",href:"tel:+94727568612"}],
   dubai:[{label:"Email",value:"md@tgfholding.com",href:"mailto:md@tgfholding.com"},{label:"Email",value:"sales@tgfholding.com",href:"mailto:sales@tgfholding.com"},{label:"Mr Thushara",value:"+94 72 756 8612",href:"tel:+94727568612"},{label:"Mr Prageeth",value:"+94 77 716 6233",href:"tel:+94777166233"}],
 };
 
