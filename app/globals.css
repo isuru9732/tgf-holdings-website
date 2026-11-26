@@ -294,5 +294,6 @@
 .country-hero:before{background-image:var(--country-hero-image)}
 .proto-market{background-image:linear-gradient(0deg,rgba(2,16,31,.78),rgba(2,16,31,.01) 72%),url('https://raw.githubusercontent.com/isuru9732/tgf-holdings-website/main/public/markets-atlas.png')}
 .proto-market.market-global{background-image:linear-gradient(0deg,rgba(2,16,31,.85),rgba(2,16,31,.08) 72%),url('https://raw.githubusercontent.com/isuru9732/tgf-holdings-website/main/public/hero-global.webp')}
+.proto-market.market-2{background-image:linear-gradient(0deg,rgba(2,16,31,.82),rgba(2,16,31,.02) 72%),url('https://raw.githubusercontent.com/isuru9732/tgf-holdings-website/main/public/market-bangladesh-cityscape.png'),url('/market-bangladesh-cityscape.png');background-position:center,center center,center center}
 .service-photo,.service-photo-2,.service-photo-5{background-image:url('https://raw.githubusercontent.com/isuru9732/tgf-holdings-website/main/public/services-atlas.webp')}
 
